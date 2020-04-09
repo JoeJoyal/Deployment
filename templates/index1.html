@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+  		<meta charset="UTF-8">
+		<title> Machine Learning API</title>
+  	</head>
+               <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  	           <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    	       <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
+               <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		       <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+		       <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+		       <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  	<style type="text/css">
+      .header{
+      	display: block;
+      	background-color:gray;
+      	padding: 15px;
+      	font-size: 30px;
+      }
+
+      .bgcolor{
+        background-color:#021C1E;
+      }
+
+      .back{
+      	position: relative;
+      	background-color:#2C7873;
+      	height: 350px;
+      	width: 50%;
+      	left: 25%;
+        box-shadow:5px 5px #FFA577;
+      }
+
+     .table_algin{
+     	position: relative;
+     }
+     
+    .texteff{
+      position: relative;
+    	/*width: 40%;*/
+    	height: 30px;
+      left: 120%;
+    }
+    
+     .Predict_btn{
+        position: relative;
+     	font-size:15px;
+     	width: 5%;
+     	height: 40px;
+     	left: 120%;
+     }
+
+     input{
+       width: 100%;
+     }
+
+  	</style>
+
+  	<body class="bgcolor">
+  		<div class="login">
+  			<h1>
+  				<center><span class="header">Predict Salary Analysis</span></center>
+  			</h1>
+  			<form action="{{ url_for('predict')}}" method="post">
+
+  				<div class="back">
+
+  					<table class="table_algin">
+  						<tr>
+  							<td>
+  								<span class="texteff"> <br>
+  								   <input type="text" name="experience_txt" placeholder="Experience" required="Fill required">
+                  </span>
+  							</td>
+  						</tr><br>
+  						
+  						<tr>
+  							<td>
+  								<span class="texteff"> <br>
+  								   <input type="text" name="test_score_txt" placeholder="Test score" required="Fill required">
+  								</span>
+  							</td>
+  						</tr>
+
+  						<tr>
+  							<td>
+  								<span class="texteff"> <br>
+  								   <input type="text" name="interview_score_txt" placeholder="Interview score" required="Fill required">
+  								</span>
+  							</td>
+  						</tr>
+
+  						<tr>
+  							<td>
+  								<span class="Predict_btn"> <br>
+  								   <button  type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+  					      </span>
+  						        
+  							</td>
+  						</tr>
+
+                       <tr>
+                           <td> <br>
+                              {{prediction_text}}
+                           </td>
+                
+                       </tr>
+                        
+  						
+  					</table>
+  					  
+  				</div>
+  				          
+
+  			</form>
+  		</div>
+  	</body>
+</html>

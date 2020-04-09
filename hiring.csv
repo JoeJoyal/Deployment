@@ -1,0 +1,17 @@
+experience,test_score,interview_score,salary
+zero,8,7,15000
+NaN,7,8,18000
+one,NaN,9,25000
+two,9,8,35000
+three,6,8,50000
+four,7,9,55000
+five,7,8,60000
+six,NaN,8,65000
+seven,7,9,70000
+eight,8,9,80000
+ten,7,8,85000
+eleven,6,8,90000
+twelve,8,9,100000
+thirteen,7,6,120000
+fourteen,NaN,8,135000
+fifteen,9,8,150000
