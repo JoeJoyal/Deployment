@@ -38,10 +38,10 @@ regressor = GradientBoostingRegressor()
 regressor.fit(X, y)
 
 # Saving model to disk
-pickle.dump(regressor, open('model\Training_GradientBoostingRegressor_model.pk2','wb'))
+pickle.dump(regressor, open('Training_GradientBoostingRegressor_model.pk2','wb'))
 
 # Loading model to compare the results
-model = pickle.load(open('model\Training_GradientBoostingRegressor_model.pk2','rb'))
+model = pickle.load(open('Training_GradientBoostingRegressor_model.pk2','rb'))
 print(model.predict([[3,6,8]]))
 
 #LinearRegression algorithm
