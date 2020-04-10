@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('model\Training_GradientBoostingRegressor_model.pk2', 'rb'))
+model = pickle.load(open('Training_GradientBoostingRegressor_model.pk2', 'rb'))
 
 @app.route('/')
 def home():
